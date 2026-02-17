@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="POST" action="{% url 'add_student' %}" style="text-align: center;">
+    {% csrf_token %}
+
+    <h1>Student Details</h1>
+
+    <label>Name:</label><br>
+    <input type="text" name="name" required>
+    <br><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email" required>
+    <br><br>
+
+    <label>Mobile No:</label><br>
+    <input type="text" name="mobile_no" required>
+    <br><br>
+
+    <label>DOB:</label><br>
+    <input type="date" name="DoB">
+    <br><br>
+
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}
